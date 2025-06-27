@@ -1,0 +1,32 @@
+stages:
+  train-test-split:
+    cmd: python src/models/train_test_split.py
+    deps:
+    - src/data
+    - src/models/train_test_split.py
+    outs:
+    - data/processed_data/_split
+  scaling:
+    cmd: python src/models/scaling.py
+    deps:
+    - data/processed_data/_split
+    - src/models/scaling.py
+    outs:
+    - data/processed_data/_scaling
+  gridsearch:
+    cmd: python src/models/gridsearch.py
+    deps:
+    - data/processed_data/_scaling
+    - data/processed_data/_split
+    - src/models/gridsearch.py
+    outs:
+    - models/best_params
+  train:
+    cmd: python src/models/train.py
+    deps:
+    - data/processed_data/_scaling
+    - data/processed_data/_split
+    - models/best_params
+    - src/models/train.py
+    outs:
+    - models/best_models
