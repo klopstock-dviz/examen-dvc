@@ -87,3 +87,31 @@ stages:
       md5: 55dbc865c3e337cc2d95c3190d4e18da.dir
       size: 25349881
       nfiles: 1
+  evaluation:
+    cmd: python src/models/evaluation.py
+    deps:
+    - path: data/processed_data/_scaling
+      hash: md5
+      md5: 15e142979e00a62c5cb3ac0a114ad37a.dir
+      size: 327295
+      nfiles: 2
+    - path: data/processed_data/_split
+      hash: md5
+      md5: 271aef18db5c0233ac5bc5082d8762c5.dir
+      size: 310453
+      nfiles: 4
+    - path: models/best_models
+      hash: md5
+      md5: 55dbc865c3e337cc2d95c3190d4e18da.dir
+      size: 25349881
+      nfiles: 1
+    - path: src/models/evaluation.py
+      hash: md5
+      md5: 47fc3eee776a108c0261de7647d1513d
+      size: 1062
+    outs:
+    - path: metrics
+      hash: md5
+      md5: e94471441879518fa2ad6dd7babb9bd7.dir
+      size: 121
+      nfiles: 1
