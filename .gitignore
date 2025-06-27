@@ -1,4 +1,5 @@
 /env
+/metrics
 /src/data/raw.csv
 /data/processed_data/*
 *.joblib
