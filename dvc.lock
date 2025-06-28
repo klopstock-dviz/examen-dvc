@@ -79,13 +79,13 @@ stages:
       nfiles: 1
     - path: src/models/train.py
       hash: md5
-      md5: 96f82aafc3857ac4a7e0f643c9df49f3
-      size: 1172
+      md5: 0dd0635bf64976a1c66584dd41856985
+      size: 1206
     outs:
     - path: models/best_models
       hash: md5
-      md5: 55dbc865c3e337cc2d95c3190d4e18da.dir
-      size: 25349881
+      md5: 3a015a5a10643edb904fd53c981a738a.dir
+      size: 25376885
       nfiles: 1
   evaluation:
     cmd: python src/models/evaluation.py
@@ -102,16 +102,16 @@ stages:
       nfiles: 4
     - path: models/best_models
       hash: md5
-      md5: 55dbc865c3e337cc2d95c3190d4e18da.dir
-      size: 25349881
+      md5: 3a015a5a10643edb904fd53c981a738a.dir
+      size: 25376885
       nfiles: 1
     - path: src/models/evaluation.py
       hash: md5
-      md5: da39b8c58919cf454ba836b4e3955f17
-      size: 1118
+      md5: ffa3b74cafdea3a5d4b8eca4edc95ead
+      size: 1150
     outs:
     - path: metrics
       hash: md5
-      md5: 4df00df0c8496d93d6a8b1cfafbb335b.dir
-      size: 14516
+      md5: 70d6dd2f468277f2201c425a3e3d2512.dir
+      size: 14455
       nfiles: 2
